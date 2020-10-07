@@ -5,6 +5,7 @@ import { shallow } from 'enzyme';
 import Layout from './index';
 import Header from '../components/Header';
 import InnerLayout from './InnerLayout';
+import Footer from '../components/Footer';
 
 
 describe('<Layout />', () => {
@@ -22,5 +23,10 @@ describe('<Layout />', () => {
   it('should render inner layout', () => {
     const innerLayout = wrapper.find(InnerLayout);
     expect(innerLayout).to.have.length(1);
+  });
+
+  it('should render Footer', () => {
+    const layoutFooter = wrapper.find(Footer);
+    expect(layoutFooter).to.have.length(1);
   });
 });
