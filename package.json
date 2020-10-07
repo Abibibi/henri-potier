@@ -39,8 +39,8 @@
     "webpack-dev-server": "*"
   },
   "scripts": {
-    "test": "mocha --require tests/.setup.js tests/**/*.test.js",
-    "test:watch": "mocha --watch --require tests/.setup.js tests/**/*.test.js",
+    "test": "mocha --require tests/.setup.js 'src/**/*.test.js'",
+    "test:watch": "npm run test -- --watch",
     "start": "webpack-dev-server",
     "clean": "rm -rf dist",
     "clean:all": "rm -rf dist node_modules",

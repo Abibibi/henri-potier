@@ -2,8 +2,8 @@ import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
-import Header from '../../src/components/Header';
-import HeaderStyled from '../../src/components/Header/Header';
+import Header from './index';
+import HeaderStyled from './Header';
 
 
 describe('<Header />', () => {
