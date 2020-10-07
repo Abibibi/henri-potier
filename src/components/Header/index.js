@@ -2,6 +2,7 @@ import React from 'react';
 
 import HeaderStyled from './Header';
 
+
 const Header = () => (
   <HeaderStyled>
     <h1><a>Henri Potier</a></h1>
