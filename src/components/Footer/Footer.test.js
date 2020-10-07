@@ -11,6 +11,6 @@ describe('<Footer />', () => {
 
   it('should render footer styled component', () => {
     const FooterStyledComp = wrapper.find(FooterStyled);
-    expect(FooterStyledComp).to.have.length(1);
+    expect(FooterStyledComp).to.have.lengthOf(1);
   });
 });

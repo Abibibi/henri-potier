@@ -17,16 +17,16 @@ describe('<Layout />', () => {
 
   it('should render Header', () => {
     const layoutHeader = wrapper.find(Header);
-    expect(layoutHeader).to.have.length(1);
+    expect(layoutHeader).to.have.lengthOf(1);
   });
 
   it('should render inner layout', () => {
     const innerLayout = wrapper.find(InnerLayout);
-    expect(innerLayout).to.have.length(1);
+    expect(innerLayout).to.have.lengthOf(1);
   });
 
   it('should render Footer', () => {
     const layoutFooter = wrapper.find(Footer);
-    expect(layoutFooter).to.have.length(1);
+    expect(layoutFooter).to.have.lengthOf(1);
   });
 });

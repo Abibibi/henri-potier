@@ -16,7 +16,7 @@ describe('<Header />', () => {
   });
 
   it('should render a Header styled component', () => {
-    expect(HeaderStyledComp).to.have.length(1);
+    expect(HeaderStyledComp).to.have.lengthOf(1);
   });
 
   describe('<h1 />', () => {
@@ -27,12 +27,12 @@ describe('<Header />', () => {
     });
 
     it('should render a h1 as a logo', () => {
-      expect(h1).to.have.length(1);
+      expect(h1).to.have.lengthOf(1);
     });
 
     it('should render a link nested in h1 logo', () => {
       const h1Link = h1.find('a');
-      expect(h1Link).to.have.length(1);
+      expect(h1Link).to.have.lengthOf(1);
     });
   });
 
@@ -48,7 +48,7 @@ describe('<Header />', () => {
     });
 
     it('should render a label as a search bar name', () => {
-      expect(label).to.have.length(1);
+      expect(label).to.have.lengthOf(1);
     });
 
     it('should render a label with a "book" htmlFor attribute', () => {
@@ -57,7 +57,7 @@ describe('<Header />', () => {
 
     it('should render an input as a search bar, nested in label', () => {
       const inputInLabel = label.find('input');
-      expect(inputInLabel).to.have.length(1);
+      expect(inputInLabel).to.have.lengthOf(1);
     });
 
     it('should render an input with a "book" id attribute', () => {
@@ -85,7 +85,7 @@ describe('<Header />', () => {
     });
 
     it('should render a link', () => {
-      expect(link).to.have.length(1);
+      expect(link).to.have.lengthOf(1);
     });
   });
 });
