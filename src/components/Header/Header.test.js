@@ -7,7 +7,11 @@ import HeaderStyled from './Header';
 
 
 describe('<Header />', () => {
-  const wrapper = shallow(<Header />);
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(<Header />);
+  });
 
   it('should contain Header styled component', () => {
     const HeaderStyledComp = wrapper.find(HeaderStyled);
