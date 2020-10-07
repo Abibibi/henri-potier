@@ -77,6 +77,10 @@ const HeaderStyled = styled.header`
       label {
         width: 100%;
       }
+
+      input {
+        display: block;
+      }
     }
   }
 `;
