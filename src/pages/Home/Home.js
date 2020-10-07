@@ -4,6 +4,7 @@ import { SCREEN } from '../../styles/theme';
 
 const HomeStyled = styled.div`
   width: 100%;
+  background: ${({ theme }) => theme.color.white};
   display: flex;
   flex-direction: column;
   

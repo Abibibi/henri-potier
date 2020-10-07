@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <Layout>
-      <HomeStyled></HomeStyled>
+      <HomeStyled>bla</HomeStyled>
     </Layout>
   );
 };

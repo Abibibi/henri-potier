@@ -6,6 +6,7 @@ import Home from './index';
 import Layout from '../../layout';
 import HomeStyled from './Home';
 
+
 describe('<Home />', () => {
   let wrapper;
   let HomeStyledComp;

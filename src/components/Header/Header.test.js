@@ -40,11 +40,13 @@ describe('<Header />', () => {
     let form;
     let label;
     let input;
+    let button;
 
     beforeEach(() => {
       form = HeaderStyledComp.find('form');
       label = form.find('label');
       input = form.find('input');
+      button = form.find('button');
     });
 
     it('should render a label as a search bar name', () => {
@@ -52,7 +54,7 @@ describe('<Header />', () => {
     });
 
     it('should render a label with a "book" htmlFor attribute', () => {
-      expect(label.props()).to.have.property('htmlFor').which.equal('book');
+      expect(label.props()).to.have.property('htmlFor', 'book');
     });
 
     it('should render an input as a search bar, nested in label', () => {
@@ -61,19 +63,27 @@ describe('<Header />', () => {
     });
 
     it('should render an input with a "book" id attribute', () => {
-      expect(input.props()).to.have.property('id').which.equal('book');
+      expect(input.props()).to.have.property('id', 'book');
     });
 
     it('should render an input with a "book" name attribute', () => {
-      expect(input.props()).to.have.property('name').which.equal('book');
+      expect(input.props()).to.have.property('name', 'book');
     });
 
     it('should render an input with a "book" name attribute', () => {
-      expect(input.props()).to.have.property('name').which.equal('book');
+      expect(input.props()).to.have.property('name', 'book');
     });
 
     it('should render an input with a "Veuillez saisir un titre de livre" title attribute', () => {
-      expect(input.props()).to.have.property('title').which.equal('Veuillez saisir un titre de livre');
+      expect(input.props()).to.have.property('title', 'Veuillez saisir un titre de livre');
+    });
+
+    it('should render a button', () => {
+      expect(button).to.have.lengthOf(1);
+    });
+
+    it('should render a button with a "submit" type attribute', () => {
+      expect(button.props()).to.have.property('type', 'submit');
     });
   });
 
