@@ -1,6 +1,6 @@
 const sizes = {
   XXS: '1.3rem',
-  XS: '1.6rem',
+  XS: '1.5rem',
   S: '1.8rem',
   M: '2.3rem',
   L: '3.3rem',
