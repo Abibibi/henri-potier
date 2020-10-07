@@ -57,9 +57,8 @@ describe('<Header />', () => {
       expect(label.props()).to.have.property('htmlFor', 'book');
     });
 
-    it('should render an input as a search bar, nested in label', () => {
-      const inputInLabel = label.find('input');
-      expect(inputInLabel).to.have.lengthOf(1);
+    it('should render an input as a search bar', () => {
+      expect(input).to.have.lengthOf(1);
     });
 
     it('should render an input with a "book" id attribute', () => {
