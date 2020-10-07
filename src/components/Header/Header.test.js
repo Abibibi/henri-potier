@@ -19,9 +19,21 @@ describe('<Header />', () => {
     expect(HeaderStyledComp).to.have.length(1);
   });
 
-  it('should render a h1', () => {
-    const h1 = HeaderStyledComp.find('h1');
-    expect(h1).to.have.length(1);
+  describe('<h1 />', () => {
+    let h1;
+
+    beforeEach(() => {
+      h1 = HeaderStyledComp.find('h1');
+    });
+
+    it('should render a h1 as a logo', () => {
+      expect(h1).to.have.length(1);
+    });
+
+    it('should render a link nested in h1 logo', () => {
+      const h1Link = h1.find('a');
+      expect(h1Link).to.have.length(1);
+    });
   });
 
   describe('<form />', () => {
@@ -35,8 +47,45 @@ describe('<Header />', () => {
       input = form.find('input');
     });
 
-    it('should render a search bar', () => {
-      expect(input).to.have.length(1);
+    it('should render a label as a search bar name', () => {
+      expect(label).to.have.length(1);
+    });
+
+    it('should render a label with a "book" htmlFor attribute', () => {
+      expect(label.props()).to.have.property('htmlFor').which.equal('book');
+    });
+
+    it('should render an input as a search bar, nested in label', () => {
+      const inputInLabel = label.find('input');
+      expect(inputInLabel).to.have.length(1);
+    });
+
+    it('should render an input with a "book" id attribute', () => {
+      expect(input.props()).to.have.property('id').which.equal('book');
+    });
+
+    it('should render an input with a "book" name attribute', () => {
+      expect(input.props()).to.have.property('name').which.equal('book');
+    });
+
+    it('should render an input with a "book" name attribute', () => {
+      expect(input.props()).to.have.property('name').which.equal('book');
+    });
+
+    it('should render an input with a "Veuillez saisir un titre de livre" title attribute', () => {
+      expect(input.props()).to.have.property('title').which.equal('Veuillez saisir un titre de livre');
+    });
+  });
+
+  describe('<a />', () => {
+    let link;
+
+    beforeEach(() => {
+      link = HeaderStyledComp.find('a').at(1);
+    });
+
+    it('should render a link', () => {
+      expect(link).to.have.length(1);
     });
   });
 });
