@@ -5,6 +5,11 @@ import { SCREEN } from '../styles/theme';
 const InnerLayout = styled.div`
   width: 100%;
   max-width: 1140px;
+  margin-top: ${({ theme }) => theme.spacing.L};
+
+  ${SCREEN.DESKTOP} {
+    margin-top: ${({ theme }) => theme.spacing.M};
+  }
 
   ${SCREEN.BIGGER_DESKTOP} {
     max-width: 1340px;
