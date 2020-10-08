@@ -1,34 +1,34 @@
 // == Initial State
 const initialState = {
-  message: 'Hello',
+  homeProducts: [],
 };
 
 // == Types
-const DO_SOMETHING = 'DO_SOMETHING';
+export const HOME_PRODUCTS_SOUGHT = 'HOME_PRODUCTS_SOUGHT';
+const HOME_PRODUCTS_FETCHED = 'HOME_PRODUCTS_FETCHED';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
   switch (action.type) {
-    case DO_SOMETHING:
+    case HOME_PRODUCTS_FETCHED:
       return {
         ...state,
-        message: action.message,
+        homeProducts: action.products,
       };
-
     default:
       return state;
   }
 };
 
 // == Action Creators
-export const doSomething = message => ({
-  type: DO_SOMETHING,
-  message,
+export const homeProductsSought = () => ({
+  type: HOME_PRODUCTS_SOUGHT,
 });
 
-
-// == Selectors
-
+export const homeProductsFetched = (products) => ({
+  type: HOME_PRODUCTS_FETCHED,
+  products,
+});
 
 // == Export
 export default reducer;

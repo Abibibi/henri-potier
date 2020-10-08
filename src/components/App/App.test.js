@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
 import App from './index';
-import Home from '../../pages/Home';
+import Home from '../../containers/Home';
 
 
 describe('<App />', () => {

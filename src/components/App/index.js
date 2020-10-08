@@ -3,7 +3,7 @@ import React from 'react';
 
 // == Import : local
 import './app.scss';
-import Home from '../../pages/Home';
+import Home from '../../containers/Home';
 
 
 // == Composant

@@ -1,14 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Layout from '../../layout';
-import HomeStyled from './Home';
+import { HomeAllContentStyled, HomeProductsContentStyled } from './Home';
+import HomeProduct from '../../components/HomeProduct';
 
 
-const Home = () => {
+const Home = ({ homeProductsCalled, homeProducts }) => {
+  useEffect(() => {
+    homeProductsCalled();
+  }, []);
 
   return (
     <Layout>
-      <HomeStyled>bla</HomeStyled>
+      <HomeAllContentStyled>
+        <h2>Tous les livres Henri Potier</h2>
+        <HomeProductsContentStyled>
+          {homeProducts?.map(({
+            cover,
+            price,
+            title,
+          }, index) => (
+            <HomeProduct
+              key={index}
+              cover={cover}
+              price={price}
+              title={title}
+            />
+          ))}
+        </HomeProductsContentStyled>
+      </HomeAllContentStyled>
     </Layout>
   );
 };
