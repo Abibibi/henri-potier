@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
 import Header from './index';
-import HeaderStyled from './Header';
+import { HeaderStyled } from './Header';
 
 
 describe('<Header />', () => {
@@ -33,6 +33,11 @@ describe('<Header />', () => {
     it('should render a link nested in h1 logo', () => {
       const h1Link = h1.find('a');
       expect(h1Link).to.have.lengthOf(1);
+    });
+
+    it('should render an image nested in h1 link', () => {
+      const imageH1 = h1.find('img');
+      expect(imageH1).to.have.lengthOf(1);
     });
   });
 

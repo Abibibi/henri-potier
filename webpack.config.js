@@ -108,7 +108,7 @@ module.exports = {
       },
       // fonts
       {
-        test: /\.(ttf|otf|eot|woff2?)(\?[a-z0-9]+)?$/,
+        test: /\.(ttf|otf|eot|woff|woff2?)(\?[a-z0-9]+)?$/,
         exclude: /medias/,
         use: [
           {

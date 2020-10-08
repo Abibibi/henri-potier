@@ -2,7 +2,12 @@
 @import 'vars';
 
 body {
-  font-family: sans-serif;
+  font-family: 'Mukta', sans-serif;
   font-size: 1.8rem;
-  background: #000000;
+  background-image: url('https://www.cjoint.com/doc/20_10/JJhxf36DzDA_nature-3151869-1920.jpg');
+  background-position: 26% 75%;
+
+  @media only screen and (min-width: 1112px) {
+    background-position: 50% 75%;
+  }
 }

@@ -22,7 +22,9 @@ export const SCREEN = {
 export default {
   color: {
     white: '#FFFFFF',
-    black: '#000000',
+    black: '#0E0E0E',
+    orange: '#F3A847',
+    darkerOrange: '#c18537',
   },
   font: sizes,
   spacing: sizes,

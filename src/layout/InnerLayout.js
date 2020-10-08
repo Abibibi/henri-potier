@@ -4,6 +4,7 @@ import { SCREEN } from '../styles/theme';
 
 const InnerLayout = styled.div`
   width: 100%;
+  min-height: 30rem;
   max-width: 1140px;
   margin-top: ${({ theme }) => theme.spacing.L};
 
