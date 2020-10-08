@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import Layout from '../../layout';
 import { HomeAllContentStyled, HomeProductsContentStyled } from './Home';
 import HomeProduct from '../../components/HomeProduct';
 
 
-const Home = () => {
+const Home = ({ homeProductsCalled }) => {
+  useEffect(() => {
+    homeProductsCalled();
+  }, []);
 
   return (
     <Layout>
