@@ -8,7 +8,6 @@ const initialState = {
 export const HOME_PRODUCTS_SOUGHT = 'HOME_PRODUCTS_SOUGHT';
 const HOME_PRODUCTS_FETCHED = 'HOME_PRODUCTS_FETCHED';
 const SEARCH_INPUT_CHANGED = 'SEARCH_INPUT_CHANGED';
-const PRODUCTS_SEARCHED = 'PRODUCTS_SEARCHED';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -22,11 +21,6 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         search: action.value,
-      };
-    case PRODUCTS_SEARCHED:
-      return {
-        ...state,
-        productsResults: action.products,
       };
     default:
       return state;

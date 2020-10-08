@@ -12,7 +12,7 @@ const HomeProduct = ({
     <img src={cover} alt={title} />
     <div>{price}€</div>
     <h3>{title}</h3>
-    <button type="submit">Ajouer au panier</button>
+    <button type="submit">Ajouter au panier</button>
   </HomeProductStyled>
 );
 

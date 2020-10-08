@@ -18,7 +18,6 @@ const Header = ({
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log('yes');
 
     setRedirect(true);
   };
