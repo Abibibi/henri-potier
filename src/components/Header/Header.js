@@ -18,6 +18,29 @@ export const HeaderStyled = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
+  @media only screen and (max-width: 1139px) {
+    padding: 1rem ${({ theme }) => theme.spacing.S};
+  }
+
+  ${SCREEN.DESKTOP} {
+    height: 70px;
+    font-size: ${({ theme }) => theme.font.XS};
+
+    div:first-child {
+      height: 100%;
+    }
+
+    img {
+      width: 8rem;
+    }
+  }
+
+  ${SCREEN.BIGGER_DESKTOP} {
+    max-width: 1340px;
+    height: 75px;
+    font-size: ${({ theme }) => theme.font.S};
+  }
+
   div:first-child {
     display: flex;
     flex-direction: row;
@@ -117,28 +140,5 @@ export const HeaderStyled = styled.div`
         width: 42rem;
       }
     }
-  }
-
-  @media only screen and (max-width: 1139px) {
-    padding: 1rem ${({ theme }) => theme.spacing.S};
-  }
-
-  ${SCREEN.DESKTOP} {
-    height: 70px;
-    font-size: ${({ theme }) => theme.font.XS};
-
-    div:first-child {
-      height: 100%;
-    }
-
-    img {
-      width: 8rem;
-    }
-  }
-
-  ${SCREEN.BIGGER_DESKTOP} {
-    max-width: 1340px;
-    height: 75px;
-    font-size: ${({ theme }) => theme.font.S};
   }
 `;

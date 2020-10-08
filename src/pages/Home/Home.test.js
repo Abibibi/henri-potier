@@ -4,16 +4,17 @@ import { shallow } from 'enzyme';
 
 import Home from './index';
 import Layout from '../../layout';
-import HomeStyled from './Home';
+import { HomeAllContentStyled } from './Home';
+import HomeProduct from '../../components/HomeProduct';
 
 
 describe('<Home />', () => {
   let wrapper;
-  let HomeStyledComp;
+  let HomeAllContentStyledComp;
 
   beforeEach(() => {
     wrapper = shallow(<Home />);
-    HomeStyledComp = wrapper.find(HomeStyled);
+    HomeAllContentStyledComp = wrapper.find(HomeAllContentStyled);
   });
 
   it('should render layout', () => {
@@ -22,6 +23,11 @@ describe('<Home />', () => {
   });
 
   it('should render a Home styled component', () => {
-    expect(HomeStyledComp).to.have.lengthOf(1);
+    expect(HomeAllContentStyledComp).to.have.lengthOf(1);
+  });
+
+  it('should render 7 product components', () => {
+    const OneHomeProduct = wrapper.find(HomeProduct);
+    expect(OneHomeProduct).to.have.lengthOf(7);
   });
 });

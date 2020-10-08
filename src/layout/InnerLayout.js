@@ -6,10 +6,10 @@ const InnerLayout = styled.div`
   width: 100%;
   min-height: 30rem;
   max-width: 1140px;
-  margin-top: ${({ theme }) => theme.spacing.L};
+  margin: ${({ theme }) => theme.spacing.L} 0;
 
   ${SCREEN.DESKTOP} {
-    margin-top: ${({ theme }) => theme.spacing.M};
+    margin: ${({ theme }) => theme.spacing.M} 0;
   }
 
   ${SCREEN.BIGGER_DESKTOP} {

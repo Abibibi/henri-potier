@@ -58,7 +58,7 @@ describe('<Header />', () => {
       expect(label).to.have.lengthOf(1);
     });
 
-    it('should render a label with a "book" htmlFor attribute', () => {
+    it('should render a label with a "book" htmlFor property', () => {
       expect(label.props()).to.have.property('htmlFor', 'book');
     });
 
@@ -66,19 +66,19 @@ describe('<Header />', () => {
       expect(input).to.have.lengthOf(1);
     });
 
-    it('should render an input with a "book" id attribute', () => {
+    it('should render an input with a "book" id property', () => {
       expect(input.props()).to.have.property('id', 'book');
     });
 
-    it('should render an input with a "book" name attribute', () => {
+    it('should render an input with a "book" name property', () => {
       expect(input.props()).to.have.property('name', 'book');
     });
 
-    it('should render an input with a "book" name attribute', () => {
+    it('should render an input with a "book" name property', () => {
       expect(input.props()).to.have.property('name', 'book');
     });
 
-    it('should render an input with a "Veuillez saisir un titre de livre" title attribute', () => {
+    it('should render an input with a "Veuillez saisir un titre de livre" title property', () => {
       expect(input.props()).to.have.property('title', 'Veuillez saisir un titre de livre');
     });
 
@@ -86,7 +86,7 @@ describe('<Header />', () => {
       expect(button).to.have.lengthOf(1);
     });
 
-    it('should render a button with a "submit" type attribute', () => {
+    it('should render a button with a "submit" type property', () => {
       expect(button.props()).to.have.property('type', 'submit');
     });
   });
