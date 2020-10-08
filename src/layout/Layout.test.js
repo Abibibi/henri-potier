@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
 import Layout from './index';
-import Header from '../components/Header';
+import Header from '../containers/Header';
 import InnerLayout from './InnerLayout';
 import Footer from '../components/Footer';
 

@@ -10,8 +10,8 @@ const middleware = (store) => (next) => async (action) => {
   switch (action.type) {
     case HOME_PRODUCTS_SOUGHT:
       try {
-        const response = await axios.get(process.env.API_HOME);
-        store.dispatch(homeProductsFetched(response.data));
+        const { data } = await axios.get(process.env.API_HOME);
+        store.dispatch(homeProductsFetched(data));
       }
       catch (error) {
         console.log(error);

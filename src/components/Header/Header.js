@@ -133,6 +133,7 @@ export const HeaderStyled = styled.div`
 
       label {
         width: 72%;
+        cursor: default;
       }
 
       input {
