@@ -1,6 +1,8 @@
 import React from 'react';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
+import MockAdapter from 'axios-mock-adapter';
+import axios from 'axios';
 
 import Home from './index';
 import Layout from '../../layout';
@@ -24,10 +26,5 @@ describe('<Home />', () => {
 
   it('should render a Home styled component', () => {
     expect(HomeAllContentStyledComp).to.have.lengthOf(1);
-  });
-
-  it('should render 7 product components', () => {
-    const OneHomeProduct = wrapper.find(HomeProduct);
-    expect(OneHomeProduct).to.have.lengthOf(7);
   });
 });

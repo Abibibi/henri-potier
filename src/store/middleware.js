@@ -9,24 +9,14 @@ import {
 const middleware = (store) => (next) => async (action) => {
   switch (action.type) {
     case HOME_PRODUCTS_SOUGHT:
-
       try {
-        const { data } = await axios.get(process.env.API_HOME);
-        store.dispatch(homeProductsFetched(data));
+        const response = await axios.get(process.env.API_HOME);
+        store.dispatch(homeProductsFetched(response.data));
       }
       catch (error) {
         console.log(error);
       }
       break;
-      // axios.get(url)
-      //   .then(response => {
-      //     // Ici tu sais que tu as obtenu avec succès ta réponse
-      //     // Tu peux la récupérer dans response.data
-      //     const { data } = response.
-      //     // Il faut ensuite informer le reducer des nouvelles données reçues
-      //     store.dispatch(receivedQqchose(data));
-      //   })
-      //   .catch();
     default:
       next(action);
   }

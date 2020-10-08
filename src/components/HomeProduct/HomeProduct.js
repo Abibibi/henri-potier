@@ -5,8 +5,9 @@ import { SCREEN } from '../../styles/theme';
 const HomeProductStyled = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 160px;
+  max-width: 170px;
   font-size: ${({ theme }) => theme.font.XXS};
+  margin: ${({ theme }) => theme.spacing.S};
 
   ${SCREEN.DESKTOP} {
     font-size: ${({ theme }) => theme.font.XS};
@@ -27,7 +28,7 @@ const HomeProductStyled = styled.div`
 
   button {
     height: 40px;
-    margin-top: ${({ theme }) => theme.spacing.XXS};
+    margin: ${({ theme }) => theme.spacing.XXS} 0;
     background: ${({ theme }) => theme.color.orange};
     border: none;
 

@@ -5,7 +5,7 @@ import { HomeAllContentStyled, HomeProductsContentStyled } from './Home';
 import HomeProduct from '../../components/HomeProduct';
 
 
-const Home = ({ homeProductsCalled }) => {
+const Home = ({ homeProductsCalled, homeProducts }) => {
   useEffect(() => {
     homeProductsCalled();
   }, []);
@@ -15,7 +15,18 @@ const Home = ({ homeProductsCalled }) => {
       <HomeAllContentStyled>
         <h2>Tous les livres Henri Potier</h2>
         <HomeProductsContentStyled>
-          <HomeProduct />
+          {homeProducts?.map(({
+            cover,
+            price,
+            title,
+          }, index) => (
+            <HomeProduct
+              key={index}
+              cover={cover}
+              price={price}
+              title={title}
+            />
+          ))}
         </HomeProductsContentStyled>
       </HomeAllContentStyled>
     </Layout>
