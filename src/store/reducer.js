@@ -2,12 +2,14 @@
 const initialState = {
   homeProducts: [],
   search: '',
+  cartProducts: [],
 };
 
 // == Types
 export const HOME_PRODUCTS_SOUGHT = 'HOME_PRODUCTS_SOUGHT';
 const HOME_PRODUCTS_FETCHED = 'HOME_PRODUCTS_FETCHED';
 const SEARCH_INPUT_CHANGED = 'SEARCH_INPUT_CHANGED';
+const PRODUCTS_IN_CART = 'PRODUCTS_IN_CART';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -21,6 +23,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         search: action.value,
+      };
+    case PRODUCTS_IN_CART:
+      return {
+        ...state,
+        cartProducts: action.products,
       };
     default:
       return state;
@@ -40,6 +47,11 @@ export const homeProductsFetched = (products) => ({
 export const searchInputChanged = (value) => ({
   type: SEARCH_INPUT_CHANGED,
   value,
+});
+
+export const productsInCart = (products) => ({
+  type: PRODUCTS_IN_CART,
+  products,
 });
 
 // == Export
