@@ -2,7 +2,7 @@ import axios from 'axios';
 
 import {
   HOME_PRODUCTS_SOUGHT,
-  homeProductsFetched
+  homeProductsFetched,
 } from './reducer';
 
 
@@ -11,8 +11,8 @@ const middleware = (store) => (next) => async (action) => {
     case HOME_PRODUCTS_SOUGHT:
 
       try {
-        const productsFetched = await axios.get(process.env.API_HOME);
-        console.log(productsFetched);
+        const { data } = await axios.get(process.env.API_HOME);
+        store.dispatch(homeProductsFetched(data));
       }
       catch (error) {
         console.log(error);
