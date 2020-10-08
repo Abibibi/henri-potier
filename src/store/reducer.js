@@ -1,11 +1,14 @@
 // == Initial State
 const initialState = {
   homeProducts: [],
+  search: '',
+  productsSearched: [],
 };
 
 // == Types
 export const HOME_PRODUCTS_SOUGHT = 'HOME_PRODUCTS_SOUGHT';
 const HOME_PRODUCTS_FETCHED = 'HOME_PRODUCTS_FETCHED';
+const SEARCH_INPUT_CHANGED = 'SEARCH_INPUT_CHANGED';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -14,6 +17,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         homeProducts: action.products,
+      };
+    case SEARCH_INPUT_CHANGED:
+      return {
+        ...state,
+        search: action.value,
       };
     default:
       return state;
@@ -28,6 +36,11 @@ export const homeProductsSought = () => ({
 export const homeProductsFetched = (products) => ({
   type: HOME_PRODUCTS_FETCHED,
   products,
+});
+
+export const searchInputChanged = (value) => ({
+  type: SEARCH_INPUT_CHANGED,
+  value,
 });
 
 // == Export
