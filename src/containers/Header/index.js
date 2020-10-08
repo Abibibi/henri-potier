@@ -8,6 +8,7 @@ import { searchInputChanged } from '../../store/reducer';
 
 const mapStateToProps = (state, ownProps) => ({
   search: state.search,
+  homeProducts: state.homeProducts,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

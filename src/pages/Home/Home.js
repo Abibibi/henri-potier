@@ -5,6 +5,7 @@ import { SCREEN } from '../../styles/theme';
 export const HomeAllContentStyled = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.color.white};
+  min-height: 33rem;
 
   h2 {
     font-weight: 700;
