@@ -19,7 +19,7 @@ Technologies
 - React Router
 - Redux
 
-Démarrer
+Pour démarrer
 --------------------
 
 - Pour installer les dépendances : yarn
