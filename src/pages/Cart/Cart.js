@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { SCREEN } from '../../styles/theme';
 
 
-const CartStyled = styled.div`
+export const CartStyled = styled.div`
   max-width: 100%;
   min-height: 22rem;
   display: flex;
@@ -19,4 +19,6 @@ const CartStyled = styled.div`
   }
 `;
 
-export default CartStyled;
+export const TotalCartStyled = styled.div`
+`;
+
