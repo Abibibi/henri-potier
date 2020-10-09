@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 
 import HomeProductStyled from './HomeProduct';
 import ProductButton from '../../containers/ProductButton';
@@ -16,6 +15,5 @@ const HomeProduct = ({
     <ProductButton title={title} />
   </HomeProductStyled>
 );
-
 
 export default HomeProduct;

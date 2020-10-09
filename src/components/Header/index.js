@@ -27,7 +27,7 @@ const Header = ({
       <HeaderStyled>
         <div>
           <h1><Link to="/"><img src={Logo} alt="Logo de Henri Potier" /></Link></h1>
-          <Link>
+          <Link to="/cart">
             <div><MdShoppingCart /></div>
             <div>Mon panier</div>
           </Link>

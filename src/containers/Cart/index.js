@@ -2,7 +2,7 @@
 import { connect } from 'react-redux';
 
 // == Import : local
-import Cart from '../../components/Cart';
+import Cart from '../../pages/Cart';
 
 // Action Creators
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Layout from '../../layout';
-import { HomeAllContentStyled } from './Home';
+import { HomeAllContentStyled } from '../Home/Home';
 
 
 const Cart = ({ cartProducts, homeProducts }) => (
