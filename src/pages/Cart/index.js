@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import Layout from '../../layout';
@@ -7,11 +7,24 @@ import { CartStyled, TotalCartStyled } from './Cart';
 import CartProduct from '../../components/CartProduct';
 
 
-const Cart = ({ cartProducts, homeProducts }) => {
+const Cart = ({
+  cartProducts,
+  homeProducts,
+  subtotalAndISBNSCollected,
+  offersCalled,
+  bestOffer,
+}) => {
   const productsToDisplay = cartProducts.map((cartProductTitle) => homeProducts.filter((product) => product.title === cartProductTitle)[0]);
 
-  const sum = productsToDisplay.reduce((total, { price }) => price + total, 0);
+  const subtotal = productsToDisplay.reduce((total, { price }) => price + total, 0);
 
+  const allISBNs = productsToDisplay.map(({ isbn }) => isbn).join(',');
+
+  useEffect(() => {
+    subtotalAndISBNSCollected(subtotal, allISBNs);
+
+    offersCalled();
+  }, []);
 
   return (
     <Layout>
@@ -36,13 +49,24 @@ const Cart = ({ cartProducts, homeProducts }) => {
             />
           ))}
         </CartStyled>
+        {productsToDisplay.length !== 0
+        && (
         <TotalCartStyled>
-          <h3>Total</h3>
-          <div>
-            <div>Remise : </div>
-            <div>{sum}</div>
-          </div>
+          <section>
+            <div>Sous-total</div>
+            <div>{subtotal}€</div>
+          </section>
+          <section>
+            <div>Remise</div>
+            {bestOffer.type === 'percentage' && <div>-{bestOffer.value}%</div>}
+            {(bestOffer.type === 'minus' || bestOffer.type === 'slice') && <div>-{bestOffer.value}€</div>}
+          </section>
+          <section>
+            <div>Total </div>
+            <div>{bestOffer.total}€</div>
+          </section>
         </TotalCartStyled>
+        )}
       </HomeAllContentStyled>
     </Layout>
   );

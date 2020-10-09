@@ -1,4 +1,5 @@
 const sizes = {
+  XXXS: '1rem',
   XXS: '1.3rem',
   XS: '1.5rem',
   S: '1.8rem',
@@ -28,6 +29,8 @@ export default {
     red: '#e41e1e',
     darkerRed: '#a91414',
     gray: '#6b6b6b',
+    lightGray: '#aaaaaa',
+    green: '#079c1a',
   },
   font: sizes,
   spacing: sizes,

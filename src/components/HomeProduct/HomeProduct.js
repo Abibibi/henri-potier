@@ -13,17 +13,21 @@ const HomeProductStyled = styled.div`
     font-size: ${({ theme }) => theme.font.XS};
   }
 
-  img {
-    width: 100%;
-    height: auto;
+  div:first-child {
+    min-width: 10rem;
+    min-height: 5rem;
   }
 
-  div {
+  img {
+    width: 100%;
+  }
+
+  div:nth-child(2) {
     margin: ${({ theme }) => theme.spacing.S} 0;
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.spacing.XXXS};
   }
 
   button {

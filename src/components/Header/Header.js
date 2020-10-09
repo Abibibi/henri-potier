@@ -61,23 +61,39 @@ export const HeaderStyled = styled.div`
   }
 
   a:last-child {
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.spacing.XXXS};
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: relative;
 
-    div:first-child {
+    span {
+      height: 20px;
+      width: 20px;
+      background-color: ${({ theme }) => theme.color.orange};
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      bottom: -.3rem;
+      left: -.3rem;
+      color: ${({ theme }) => theme.color.black};
+      font-size: .7rem;
+    }
+
+    & > div:first-child {
       font-size: ${({ theme }) => theme.font.S};
     }
 
     ${SCREEN.MOBILE_AND_TABLET} {
-      div:last-child {
+      & > div:last-child {
         display: none;
       }
     }
 
     ${SCREEN.DESKTOP} {
-      div:first-child {
+      & > div:first-child {
         margin-right: .6rem;
       }
     }
@@ -85,7 +101,7 @@ export const HeaderStyled = styled.div`
 
   form {
     label {
-      font-size: 1rem;
+      font-size: ${({ theme }) => theme.spacing.XXXS};
     }
 
     div {
