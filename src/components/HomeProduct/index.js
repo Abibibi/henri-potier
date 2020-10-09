@@ -9,7 +9,9 @@ const HomeProduct = ({
   title,
 }) => (
   <HomeProductStyled>
-    <img src={cover} alt={title} />
+    <div>
+      <img src={cover} alt={title} />
+    </div>
     <div>{price}€</div>
     <h3>{title}</h3>
     <ProductButton title={title} />

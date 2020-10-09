@@ -6,7 +6,8 @@ body {
   font-size: 1rem;
   background-image: url('https://www.cjoint.com/doc/20_10/JJhxf36DzDA_nature-3151869-1920.jpg');
   background-position: 26% 75%;
-
+  background-size: cover;
+  
   @media only screen and (min-width: 1112px) {
     background-position: 50% 75%;
   }
