@@ -22,7 +22,7 @@ Technologies
 Pour démarrer
 --------------------
 
-- Pour installer les dépendances : yarn
-- Pour lancer le serveur de développement : yarn start
-- Pour lancer les tests : yarn test
+- Pour installer les dépendances : `yarn`
+- Pour lancer le serveur de développement : `yarn start`
+- Pour lancer les tests : `yarn test`
 
