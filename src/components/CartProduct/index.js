@@ -6,14 +6,20 @@ import ProductButton from '../../containers/ProductButton';
 const CartProduct = ({
   cover,
   title,
+  isbn,
   synopsis,
   price,
 }) => (
   <CartProductStyled>
-    <img src={cover} alt={title} />
     <div>
-      <h3>{title}</h3>
-      <p>{synopsis}</p>
+      <img src={cover} alt={title} />
+    </div>
+    <div>
+      <div>
+        <h3>{title}</h3>
+        <p>ISBN : {isbn}</p>
+        <p>{synopsis}</p>
+      </div>
       <div>{price}€</div>
     </div>
     <ProductButton title={title} />

@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import ProductButtonStyled from './ProductButton';
+
 
 const ProductButton = ({
   title,
@@ -34,14 +36,14 @@ const ProductButton = ({
   };
 
   return (
-    <button
+    <ProductButtonStyled
       type="submit"
       id={title}
       className={buttonClass}
       onClick={addRemoveProduct}
     >
       {cartButtonText}
-    </button>
+    </ProductButtonStyled>
   );
 };
 

@@ -3,6 +3,8 @@ import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
 import ProductButton from './index';
+import ProductButtonStyled from './ProductButton';
+
 
 describe('<ProductButton />', () => {
   let wrapper;
@@ -10,7 +12,7 @@ describe('<ProductButton />', () => {
 
   beforeEach(() => {
     wrapper = shallow(<ProductButton />);
-    button = wrapper.find('button');
+    button = wrapper.find(ProductButtonStyled);
   });
 
   it('should render a button with a submit property', () => {

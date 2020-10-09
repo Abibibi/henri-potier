@@ -9,7 +9,15 @@ export const HomeAllContentStyled = styled.div`
 
   h2 {
     font-weight: 700;
+  }
+
+  h2, & > p {
     padding: ${({ theme }) => theme.spacing.S};
+    font-size: ${({ theme }) => theme.spacing.XS};
+  }
+
+  & > p {
+    text-align: center;
   }
 `;
 

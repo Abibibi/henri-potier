@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Layout from '../../layout';
 import { HomeAllContentStyled } from '../Home/Home';
@@ -14,9 +15,11 @@ const Cart = ({ cartProducts, homeProducts }) => {
       <HomeAllContentStyled>
         <h2>Mon panier</h2>
         <CartStyled>
+          {!productsToDisplay.length && <p>Votre panier est vide. Retrouvez nos produits <Link to="/">sur cette page</Link>.</p>}
           {productsToDisplay.map(({
             cover,
             title,
+            isbn,
             synopsis,
             price,
           }) => (
@@ -24,7 +27,8 @@ const Cart = ({ cartProducts, homeProducts }) => {
               key={title}
               cover={cover}
               title={title}
-              synopsis={synopsis}
+              isbn={isbn}
+              synopsis={synopsis[0]}
               price={price}
             />
           ))}

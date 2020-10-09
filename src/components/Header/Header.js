@@ -6,6 +6,7 @@ export const HeaderContainer = styled.header`
   background: ${({ theme }) => theme.color.black};
   position: fixed;
   top: 0;
+  z-index: 1;
 `;
 
 export const HeaderStyled = styled.div`
@@ -27,14 +28,6 @@ export const HeaderStyled = styled.div`
   ${SCREEN.DESKTOP} {
     height: 70px;
     font-size: ${({ theme }) => theme.font.XS};
-
-    div:first-child {
-      height: 100%;
-    }
-
-    img {
-      width: 8rem;
-    }
   }
 
   ${SCREEN.BIGGER_DESKTOP} {
@@ -48,6 +41,10 @@ export const HeaderStyled = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
+    ${SCREEN.DESKTOP} {
+      height: 100%;
+    }
   }
 
   h1, a:first-child {
@@ -57,6 +54,10 @@ export const HeaderStyled = styled.div`
 
   img {
     width: 7rem;
+
+    ${SCREEN.DESKTOP} {
+      width: 8rem;
+    }
   }
 
   a:last-child {
