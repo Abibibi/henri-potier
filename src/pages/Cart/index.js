@@ -3,12 +3,15 @@ import { Link } from 'react-router-dom';
 
 import Layout from '../../layout';
 import { HomeAllContentStyled } from '../Home/Home';
-import CartStyled from './Cart';
+import { CartStyled, TotalCartStyled } from './Cart';
 import CartProduct from '../../components/CartProduct';
 
 
 const Cart = ({ cartProducts, homeProducts }) => {
   const productsToDisplay = cartProducts.map((cartProductTitle) => homeProducts.filter((product) => product.title === cartProductTitle)[0]);
+
+  const sum = productsToDisplay.reduce((total, { price }) => price + total, 0);
+
 
   return (
     <Layout>
@@ -33,6 +36,13 @@ const Cart = ({ cartProducts, homeProducts }) => {
             />
           ))}
         </CartStyled>
+        <TotalCartStyled>
+          <h3>Total</h3>
+          <div>
+            <div>Remise : </div>
+            <div>{sum}</div>
+          </div>
+        </TotalCartStyled>
       </HomeAllContentStyled>
     </Layout>
   );
