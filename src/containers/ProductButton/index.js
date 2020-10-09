@@ -2,13 +2,14 @@
 import { connect } from 'react-redux';
 
 // == Import : local
-import HomeProduct from '../../components/HomeProduct';
+import ProductButton from '../../components/ProductButton';
 
 // Action Creators
 import { productsInCart } from '../../store/reducer';
 
 
 const mapStateToProps = (state, ownProps) => ({
+  title: ownProps.title,
   homeProducts: state.homeProducts,
   cartProducts: state.cartProducts,
 });
@@ -20,10 +21,10 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
 });
 
 // Container
-const HomeProductContainer = connect(
+const ProductButtonContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(HomeProduct);
+)(ProductButton);
 
 // == Export
-export default HomeProductContainer;
+export default ProductButtonContainer;

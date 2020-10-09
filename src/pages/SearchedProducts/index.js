@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../../layout';
 import { HomeAllContentStyled, HomeProductsContentStyled } from '../Home/Home';
-import HomeProduct from '../../containers/HomeProduct';
+import HomeProduct from '../../components/HomeProduct';
 
 
 const SearchedProducts = ({ search, homeProducts }) => {
