@@ -28,6 +28,7 @@ Pour démarrer
 --------------------
 
 - Pour installer les dépendances : `yarn`
+- Créer un fichier `.env` à la racine, y copier les clés du fichier `.env.dist` et renseigner les valeurs adéquates
 - Pour lancer le serveur de développement : `yarn start`
 - Pour lancer les tests : `yarn test`
 
