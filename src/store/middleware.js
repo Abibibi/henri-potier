@@ -7,7 +7,7 @@ import {
   offersFetched,
 } from './reducer';
 
-import allOffersTotals from './utils';
+import bestOffer from './utils';
 
 
 const middleware = (store) => (next) => async (action) => {
@@ -28,9 +28,9 @@ const middleware = (store) => (next) => async (action) => {
         try {
           const { data: { offers } } = await axios.get(`${process.env.API_HOME}/${isbns}/commercialOffers`);
 
-          console.log(allOffersTotals(subtotal, offers));
+          const bestDiscount = bestOffer(subtotal, offers);
 
-          store.dispatch(offersFetched(offers));
+          store.dispatch(offersFetched(bestDiscount));
         }
         catch (error) {
           console.log(error);

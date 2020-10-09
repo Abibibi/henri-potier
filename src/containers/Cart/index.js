@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => ({
   homeProducts: state.homeProducts,
   cartProducts: state.cartProducts,
   cartISBNS: state.cartISBNS,
-  offers: state.offers,
+  bestOffer: state.bestOffer,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

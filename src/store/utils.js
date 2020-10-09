@@ -29,11 +29,9 @@ export default (
   }
 ).filter(offer => !!offer);
 
-console.log(allOffersTotals);
+console.log(allOffersTotals)
 
-const bestOffer = allOffersTotals.reduce((prev, curr) => prev.Cost < curr.Cost ? prev : curr);
-
-console.log(bestOffer);
+const bestOffer = allOffersTotals.reduce((prev, curr) => prev.total < curr.total ? prev : curr);
 
 return bestOffer;
 }

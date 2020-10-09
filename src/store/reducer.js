@@ -5,7 +5,7 @@ const initialState = {
   cartProducts: [],
   subtotal: 0,
   cartISBNS: '',
-  offers: [],
+  bestOffer: {},
 };
 
 // == Types
@@ -44,7 +44,7 @@ const reducer = (state = initialState, action = {}) => {
     case OFFERS_FETCHED:
       return {
         ...state,
-        offers: action.offers,
+        bestOffer: action.bestOffer,
       };
     default:
       return state;
@@ -81,9 +81,9 @@ export const offersSought = () => ({
   type: OFFERS_SOUGHT,
 });
 
-export const offersFetched = (offers) => ({
+export const offersFetched = (bestOffer) => ({
   type: OFFERS_FETCHED,
-  offers,
+  bestOffer,
 });
 
 // == Export

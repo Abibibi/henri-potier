@@ -12,7 +12,7 @@ const Cart = ({
   homeProducts,
   subtotalAndISBNSCollected,
   offersCalled,
-  offers,
+  bestOffer,
 }) => {
   const productsToDisplay = cartProducts.map((cartProductTitle) => homeProducts.filter((product) => product.title === cartProductTitle)[0]);
 
@@ -58,11 +58,12 @@ const Cart = ({
           </section>
           <section>
             <div>Remise</div>
-            <div></div>
+            {bestOffer.type === 'percentage' && <div>-{bestOffer.value}%</div>}
+            {(bestOffer.type === 'minus' || bestOffer.type === 'slice') && <div>-{bestOffer.value}€</div>}
           </section>
           <section>
             <div>Total </div>
-            <div>{subtotal}€</div>
+            <div>{bestOffer.total}€</div>
           </section>
         </TotalCartStyled>
         )}
