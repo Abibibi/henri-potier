@@ -14,6 +14,7 @@ const SEARCH_INPUT_CHANGED = 'SEARCH_INPUT_CHANGED';
 const PRODUCTS_IN_CART = 'PRODUCTS_IN_CART';
 const CART_ISBNS_SAVED = 'CART_ISBNS_SAVED';
 export const OFFERS_SOUGHT = 'OFFERS_SOUGHT';
+const OFFERS_FETCHED = 'OFFERS_FETCHED';
 
 // == Reducer
 const reducer = (state = initialState, action = {}) => {
@@ -37,6 +38,11 @@ const reducer = (state = initialState, action = {}) => {
       return {
         ...state,
         cartISBNS: action.isbns,
+      };
+    case OFFERS_FETCHED:
+      return {
+        ...state,
+        offers: action.offers,
       };
     default:
       return state;
@@ -70,6 +76,11 @@ export const cartISBNSSaved = (isbns) => ({
 
 export const offersSought = () => ({
   type: OFFERS_SOUGHT,
+});
+
+export const offersFetched = (offers) => ({
+  type: OFFERS_FETCHED,
+  offers,
 });
 
 // == Export

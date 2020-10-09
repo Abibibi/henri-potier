@@ -11,6 +11,7 @@ const Cart = ({
   cartProducts,
   homeProducts,
   cartISBNSCollected,
+  offersCalled,
 }) => {
   const productsToDisplay = cartProducts.map((cartProductTitle) => homeProducts.filter((product) => product.title === cartProductTitle)[0]);
 
@@ -20,6 +21,7 @@ const Cart = ({
 
   useEffect(() => {
     cartISBNSCollected(allISBNs);
+    offersCalled();
   }, []);
 
   console.log(allISBNs);
