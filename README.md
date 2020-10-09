@@ -31,6 +31,9 @@ Pour démarrer
 - Pour lancer le serveur de développement : `yarn start`
 - Pour lancer les tests : `yarn test`
 
+Screenshots de la page d'accueil
+--------------------
+
 ![Homepage screenshot on desktop](https://github.com/Abibibi/henri-potier/blob/main/public/HenriPotierDesktop_AbebaNgwe.png?raw=true)
 
 ![Homepage screenshot on mobile](https://github.com/Abibibi/henri-potier/blob/main/public/HenriPotierMobile_AbebaNgwe.png)
