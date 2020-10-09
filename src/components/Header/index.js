@@ -9,6 +9,7 @@ import Logo from '../../styles/images/logo.png';
 const Header = ({
   search,
   searchInputModified,
+  cartProducts,
 }) => {
   const [redirect, setRedirect] = useState(false);
 
@@ -30,6 +31,7 @@ const Header = ({
           <Link to="/cart">
             <div><MdShoppingCart /></div>
             <div>Mon panier</div>
+            <span>{cartProducts.length}</span>
           </Link>
         </div>
         <form onSubmit={handleSubmit}>
