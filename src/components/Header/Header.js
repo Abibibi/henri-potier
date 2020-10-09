@@ -61,7 +61,7 @@ export const HeaderStyled = styled.div`
   }
 
   a:last-child {
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.spacing.XXXS};
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -85,7 +85,7 @@ export const HeaderStyled = styled.div`
 
   form {
     label {
-      font-size: 1rem;
+      font-size: ${({ theme }) => theme.spacing.XXXS};
     }
 
     div {

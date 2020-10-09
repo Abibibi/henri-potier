@@ -23,7 +23,7 @@ const HomeProductStyled = styled.div`
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.spacing.XXXS};
   }
 
   button {

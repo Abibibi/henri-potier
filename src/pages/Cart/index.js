@@ -36,6 +36,8 @@ const Cart = ({ cartProducts, homeProducts }) => {
             />
           ))}
         </CartStyled>
+        {productsToDisplay.length !== 0
+        && (
         <TotalCartStyled>
           <h3>Total</h3>
           <div>
@@ -43,6 +45,7 @@ const Cart = ({ cartProducts, homeProducts }) => {
             <div>{sum}</div>
           </div>
         </TotalCartStyled>
+        )}
       </HomeAllContentStyled>
     </Layout>
   );

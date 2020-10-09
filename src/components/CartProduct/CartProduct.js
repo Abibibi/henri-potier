@@ -22,7 +22,7 @@ const CartProductStyled = styled.div`
 
   & > div:nth-child(2) {
     margin-left: .8rem;
-    font-size: 1rem;
+    font-size: ${({ theme }) => theme.spacing.XXXS};
     width: 100%;
     min-height: 100%;
     display: flex;

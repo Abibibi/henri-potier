@@ -10,7 +10,7 @@ const FooterStyled = styled.footer`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1rem;
+  font-size: ${({ theme }) => theme.spacing.XXXS};
 
   @media only screen and (max-width: 1139px) {
     padding: ${({ theme }) => theme.spacing.L};
