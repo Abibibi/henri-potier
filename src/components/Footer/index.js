@@ -5,7 +5,7 @@ import FooterStyled from './Footer';
 
 const Footer = () => (
   <FooterStyled>
-    Tous droits réservés
+    Henri Potier - 2020 ©
   </FooterStyled>
 );
 

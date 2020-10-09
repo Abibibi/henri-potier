@@ -11,7 +11,7 @@ const HomeProduct = ({
   cartChanges,
   cartProducts,
 }) => {
-  const productInCart = cartProducts.find((productTitle) => productTitle === title);
+  const productInCart = cartProducts?.find((productTitle) => productTitle === title);
 
   const cartButtonText = productInCart ? 'Retirer du panier' : 'Ajouter au panier';
 
