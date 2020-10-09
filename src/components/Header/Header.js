@@ -70,6 +70,7 @@ export const HeaderStyled = styled.div`
     span {
       height: 20px;
       width: 20px;
+      font-weight: 700;
       background-color: ${({ theme }) => theme.color.orange};
       border-radius: 50%;
       display: flex;
