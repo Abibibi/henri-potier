@@ -10,8 +10,9 @@ import CartProduct from '../../components/CartProduct';
 const Cart = ({
   cartProducts,
   homeProducts,
-  cartISBNSCollected,
+  subtotalAndISBNSCollected,
   offersCalled,
+  offers,
 }) => {
   const productsToDisplay = cartProducts.map((cartProductTitle) => homeProducts.filter((product) => product.title === cartProductTitle)[0]);
 
@@ -20,11 +21,10 @@ const Cart = ({
   const allISBNs = productsToDisplay.map(({ isbn }) => isbn).join(',');
 
   useEffect(() => {
-    cartISBNSCollected(allISBNs);
+    subtotalAndISBNSCollected(subtotal, allISBNs);
+
     offersCalled();
   }, []);
-
-  console.log(allISBNs);
 
   return (
     <Layout>

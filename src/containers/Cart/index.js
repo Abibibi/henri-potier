@@ -5,18 +5,19 @@ import { connect } from 'react-redux';
 import Cart from '../../pages/Cart';
 
 // Action Creators
-import { cartISBNSSaved, offersSought } from '../../store/reducer';
+import { subtotalAndISBNSSaved, offersSought } from '../../store/reducer';
 
 
 const mapStateToProps = (state, ownProps) => ({
   homeProducts: state.homeProducts,
   cartProducts: state.cartProducts,
   cartISBNS: state.cartISBNS,
+  offers: state.offers,
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  cartISBNSCollected: (isbns) => {
-    dispatch(cartISBNSSaved(isbns));
+  subtotalAndISBNSCollected: (subtotal, isbns) => {
+    dispatch(subtotalAndISBNSSaved(subtotal, isbns));
   },
   offersCalled: () => {
     dispatch(offersSought());

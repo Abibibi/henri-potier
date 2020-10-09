@@ -3,6 +3,7 @@ const initialState = {
   homeProducts: [],
   search: '',
   cartProducts: [],
+  subtotal: 0,
   cartISBNS: '',
   offers: [],
 };
@@ -12,7 +13,7 @@ export const HOME_PRODUCTS_SOUGHT = 'HOME_PRODUCTS_SOUGHT';
 const HOME_PRODUCTS_FETCHED = 'HOME_PRODUCTS_FETCHED';
 const SEARCH_INPUT_CHANGED = 'SEARCH_INPUT_CHANGED';
 const PRODUCTS_IN_CART = 'PRODUCTS_IN_CART';
-const CART_ISBNS_SAVED = 'CART_ISBNS_SAVED';
+const SUBTOTAL_ISBNS_SAVED = 'SUBTOTAL_ISBNS_SAVED';
 export const OFFERS_SOUGHT = 'OFFERS_SOUGHT';
 const OFFERS_FETCHED = 'OFFERS_FETCHED';
 
@@ -34,9 +35,10 @@ const reducer = (state = initialState, action = {}) => {
         ...state,
         cartProducts: action.products,
       };
-    case CART_ISBNS_SAVED:
+    case SUBTOTAL_ISBNS_SAVED:
       return {
         ...state,
+        subtotal: action.subtotal,
         cartISBNS: action.isbns,
       };
     case OFFERS_FETCHED:
@@ -69,8 +71,9 @@ export const productsInCart = (products) => ({
   products,
 });
 
-export const cartISBNSSaved = (isbns) => ({
-  type: CART_ISBNS_SAVED,
+export const subtotalAndISBNSSaved = (subtotal, isbns) => ({
+  type: SUBTOTAL_ISBNS_SAVED,
+  subtotal,
   isbns,
 });
 

@@ -7,6 +7,8 @@ import {
   offersFetched,
 } from './reducer';
 
+import allOffersTotals from './utils';
+
 
 const middleware = (store) => (next) => async (action) => {
   switch (action.type) {
@@ -20,20 +22,20 @@ const middleware = (store) => (next) => async (action) => {
       }
       break;
     case OFFERS_SOUGHT:
-      const state = store.getState();
-
-      const isbns = state.cartISBNS;
+      const { subtotal, cartISBNS: isbns } = store.getState();
 
       if (isbns) {
         try {
           const { data: { offers } } = await axios.get(`${process.env.API_HOME}/${isbns}/commercialOffers`);
+
+          console.log(allOffersTotals(subtotal, offers));
+
           store.dispatch(offersFetched(offers));
         }
         catch (error) {
           console.log(error);
         }
       }
-
       break;
     default:
       next(action);
