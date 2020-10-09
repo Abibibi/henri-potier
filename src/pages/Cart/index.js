@@ -7,10 +7,22 @@ import { CartStyled, TotalCartStyled } from './Cart';
 import CartProduct from '../../components/CartProduct';
 
 
-const Cart = ({ cartProducts, homeProducts }) => {
+const Cart = ({
+  cartProducts,
+  homeProducts,
+  cartISBNSCollected,
+}) => {
   const productsToDisplay = cartProducts.map((cartProductTitle) => homeProducts.filter((product) => product.title === cartProductTitle)[0]);
 
   const subtotal = productsToDisplay.reduce((total, { price }) => price + total, 0);
+
+  const allISBNs = productsToDisplay.map(({ isbn }) => isbn).join(',');
+
+  useEffect(() => {
+    cartISBNSCollected(allISBNs);
+  }, []);
+
+  console.log(allISBNs);
 
   return (
     <Layout>
