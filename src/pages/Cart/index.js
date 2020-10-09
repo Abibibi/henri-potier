@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import Layout from '../../layout';
@@ -10,8 +10,7 @@ import CartProduct from '../../components/CartProduct';
 const Cart = ({ cartProducts, homeProducts }) => {
   const productsToDisplay = cartProducts.map((cartProductTitle) => homeProducts.filter((product) => product.title === cartProductTitle)[0]);
 
-  const sum = productsToDisplay.reduce((total, { price }) => price + total, 0);
-
+  const subtotal = productsToDisplay.reduce((total, { price }) => price + total, 0);
 
   return (
     <Layout>
@@ -39,11 +38,18 @@ const Cart = ({ cartProducts, homeProducts }) => {
         {productsToDisplay.length !== 0
         && (
         <TotalCartStyled>
-          <h3>Total</h3>
-          <div>
-            <div>Remise : </div>
-            <div>{sum}</div>
-          </div>
+          <section>
+            <div>Sous-total</div>
+            <div>{subtotal}€</div>
+          </section>
+          <section>
+            <div>Remise</div>
+            <div></div>
+          </section>
+          <section>
+            <div>Total </div>
+            <div>{subtotal}€</div>
+          </section>
         </TotalCartStyled>
         )}
       </HomeAllContentStyled>
