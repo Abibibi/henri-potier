@@ -4,6 +4,8 @@ import { SCREEN } from '../../styles/theme';
 export const HeaderContainer = styled.header`
   width: 100%;
   background: ${({ theme }) => theme.color.black};
+  position: fixed;
+  top: 0;
 `;
 
 export const HeaderStyled = styled.div`

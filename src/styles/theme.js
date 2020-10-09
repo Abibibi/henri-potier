@@ -25,6 +25,8 @@ export default {
     black: '#0E0E0E',
     orange: '#F3A847',
     darkerOrange: '#c18537',
+    red: '#e41e1e',
+    darkerRed: '#a91414',
   },
   font: sizes,
   spacing: sizes,

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../../layout';
 import { HomeAllContentStyled, HomeProductsContentStyled } from './Home';
-import HomeProduct from '../../components/HomeProduct';
+import HomeProduct from '../../containers/HomeProduct';
 
 
 const Home = ({ homeProducts }) => (

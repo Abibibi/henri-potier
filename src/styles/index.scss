@@ -11,3 +11,14 @@ body {
     background-position: 50% 75%;
   }
 }
+
+html body .cart {
+  &-remove {
+    background: #e41e1e;
+    color: #FFFFFF;
+
+    &:hover {
+      background: #a91414;
+    }
+  }
+}
