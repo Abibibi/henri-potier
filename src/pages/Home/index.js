@@ -2,7 +2,7 @@ import React from 'react';
 
 import Layout from '../../layout';
 import { HomeAllContentStyled, HomeProductsContentStyled } from './Home';
-import HomeProduct from '../../containers/HomeProduct';
+import HomeProduct from '../../components/HomeProduct';
 
 
 const Home = ({ homeProducts }) => (
@@ -16,7 +16,7 @@ const Home = ({ homeProducts }) => (
           title,
         }, index) => (
           <HomeProduct
-            key={index}
+            key={title}
             cover={cover}
             price={price}
             title={title}

@@ -4,6 +4,7 @@ import { shallow } from 'enzyme';
 
 import HomeProduct from './index';
 import HomeProductStyled from './HomeProduct';
+import ProductButton from '../../containers/ProductButton';
 
 describe('<HomeProduct />', () => {
   let wrapper;
@@ -13,7 +14,7 @@ describe('<HomeProduct />', () => {
   beforeEach(() => {
     wrapper = shallow(<HomeProduct />);
     HomeProductStyledComp = wrapper.find(HomeProductStyled);
-    button = HomeProductStyledComp.find('button');
+    button = HomeProductStyledComp.find(ProductButton);
   });
 
   it('should render a home product styled component', () => {
@@ -37,11 +38,5 @@ describe('<HomeProduct />', () => {
 
   it('should render an "add to cart" button', () => {
     expect(button).to.have.lengthOf(1);
-  });
-
-  describe('<button />', () => {
-    it('should have a "submit" property', () => {
-      expect(button.props()).to.have.property('type', 'submit');
-    });
   });
 });

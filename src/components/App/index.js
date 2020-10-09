@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import './app.scss';
 import Home from '../../containers/Home';
 import SearchedProducts from '../../containers/SearchedProducts';
+import Cart from '../../containers/Cart';
 
 // == Composant
 const App = ({ homeProductsCalled }) => {
@@ -18,6 +19,7 @@ const App = ({ homeProductsCalled }) => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/search" exact component={SearchedProducts} />
+        <Route path="/cart" exact component={Cart} />
       </Switch>
     </div>
   );

@@ -2,10 +2,9 @@
 import { connect } from 'react-redux';
 
 // == Import : local
-import HomeProduct from '../../components/HomeProduct';
+import Cart from '../../pages/Cart';
 
 // Action Creators
-import { productsInCart } from '../../store/reducer';
 
 
 const mapStateToProps = (state, ownProps) => ({
@@ -14,16 +13,14 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
-  cartChanges: (products) => {
-    dispatch(productsInCart(products));
-  },
+
 });
 
 // Container
-const HomeProductContainer = connect(
+const CartContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(HomeProduct);
+)(Cart);
 
 // == Export
-export default HomeProductContainer;
+export default CartContainer;

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { expect } from 'chai';
 import { shallow } from 'enzyme';
 
@@ -31,7 +32,7 @@ describe('<Header />', () => {
     });
 
     it('should render a link nested in h1 logo', () => {
-      const h1Link = h1.find('a');
+      const h1Link = h1.find(Link);
       expect(h1Link).to.have.lengthOf(1);
     });
 
@@ -91,14 +92,14 @@ describe('<Header />', () => {
     });
   });
 
-  describe('<a />', () => {
+  describe('Cart Link', () => {
     let link;
 
     beforeEach(() => {
-      link = HeaderStyledComp.find('a').at(1);
+      link = HeaderStyledComp.find(Link).at(1);
     });
 
-    it('should render a link', () => {
+    it('should render a link to cart page', () => {
       expect(link).to.have.lengthOf(1);
     });
   });
