@@ -22,7 +22,7 @@ const HomeProduct = ({
   const addRemoveProduct = ({ target: { id: clickedProductTitle } }) => {
     let updatedCartProducts;
 
-    if (cartProducts.length) {
+    if (cartProducts?.length) {
       if (productInCart) {
         updatedCartProducts = cartProducts.filter((anyTitle) => anyTitle !== clickedProductTitle);
       }
